@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "科研通自动签到",
+  "version": "1.0.0",
+  "description": "科研通(AbleSci.com)自动签到浏览器扩展，支持定时自动签到和手动签到。",
+  "permissions": [
+    "alarms",
+    "storage",
+    "cookies",
+    "notifications",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://*.ablesci.com/*",
+    "https://ablesci.com/*",
+    "https://www.ablesci.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html"
+  }
+}

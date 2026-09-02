@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>科研通签到</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🔬 科研通签到</h1>
+      <p class="subtitle">AbleSci.com 自动签到助手</p>
+    </header>
+
+    <!-- 状态卡片 -->
+    <div class="card status-card" id="statusCard">
+      <div class="status-icon" id="statusIcon">⏳</div>
+      <div class="status-text" id="statusText">加载中...</div>
+      <div class="status-detail" id="statusDetail"></div>
+    </div>
+
+    <!-- 手动签到按钮 -->
+    <button class="btn btn-primary" id="signBtn">
+      <span class="btn-icon">✅</span> 立即签到
+    </button>
+
+    <!-- 设置区域 -->
+    <div class="card settings-card">
+      <h2>⚙️ 自动签到设置</h2>
+      <div class="setting-row">
+        <label class="toggle-label">
+          <span>启用自动签到</span>
+          <input type="checkbox" id="autoSignToggle" checked>
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+      <div class="setting-hint" id="settingHint">每 20 分钟自动检查，签到成功后当天不再重试</div>
+      <div class="next-alarm" id="nextAlarm"></div>
+    </div>
+
+    <!-- 签到日志 -->
+    <div class="card log-card">
+      <h2>📋 签到记录</h2>
+      <div class="log-list" id="logList">
+        <div class="log-empty">暂无签到记录</div>
+      </div>
+    </div>
+
+    <footer>
+      <a href="https://www.ablesci.com/" target="_blank" rel="noopener">访问科研通</a>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
